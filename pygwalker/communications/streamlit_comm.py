@@ -1,6 +1,6 @@
 import gc
 import json
-
+import html
 from tornado.web import Application
 from streamlit import config
 from streamlit.web.server.server_util import make_url_path_regex
@@ -31,7 +31,7 @@ class PygwalkerHandler(tornado.web.RequestHandler):
     def post(self, gid: str):
         comm_obj = streamlit_comm_map.get(gid, None)
         if comm_obj is None:
-            self.write({"success": False, "message": f"Unknown gid: {gid}"})
+            self.write({"success": False, "message": f"Unknown gid: {html.escape(gid)}"})
             return
         json_data = json.loads(self.request.body)
 
