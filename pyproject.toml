@@ -27,14 +27,14 @@ dependencies = [
     "sqlalchemy",
     "gw_dsl_parser==0.1.49.1",
     "appdirs",
-    "segment-analytics-python==2.2.3",
+    "segment-analytics-python==2.3.4",
     "pandas",
     "pytz",
     "kanaries_track==0.0.5",
     "cachetools",
     "packaging",
     "numpy",
-    "ipylab<=1.0.0",
+    "ipylab<=1.1.0",
     "quickjs",
     "traitlets",
     "anywidget",
@@ -50,15 +50,15 @@ polars = ["polars"]
 streamlit = ["streamlit"]
 reflex = ["reflex"]
 notebook = [
-    "jupyter-client<=7.4.9,>6.0.0",
-    "jupyter-server<=2.5.0",
-    "ipywidgets<8.0.0,>7.0.0"
+    "jupyter-client>6.0.0,<=8.6.3",
+    "jupyter-server<=2.16.0",
+    "ipywidgets>7.0.0,<9.0.0"
 ]
 snowflake = [
     "pandas",
-    "SQLAlchemy==1.4.49",
-    "snowflake-sqlalchemy==1.5.0",
-    "pyarrow==10.0.1"
+    "SQLAlchemy==2.0.43",
+    "snowflake-sqlalchemy==1.7.6",
+    "pyarrow==21.0.0"
 ]
 labv4 = [
     "jupyter-client>7.4.9",
